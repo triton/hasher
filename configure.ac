@@ -3,7 +3,7 @@
 
 # Autoconf
 AC_PREREQ([2.64])
-AC_INIT([ipfs-hasher], [0.0.0], [https://github.com/triton/ipfs-hasher], [ipfs-hasher], [william@wkennington.com])
+AC_INIT([hasher], [0.0.0], [https://github.com/triton/hasher], [hasher], [william@wkennington.com])
 
 AC_CONFIG_HEADERS([config])
 AC_CONFIG_MACRO_DIR([m4])

@@ -1,5 +1,5 @@
 EXTRA_DIST = Catch
-TESTS = test-libipfs-hasher
-check_PROGRAMS = test-libipfs-hasher
+TESTS = test-libhasher
+check_PROGRAMS = test-libhasher
 
-test_libipfs_hasher_SOURCES = test-libipfs-hasher.cxx
+test_libhasher_SOURCES = test-libhasher.cxx

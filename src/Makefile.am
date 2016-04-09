@@ -1,8 +1,8 @@
-lib_LTLIBRARIES = libipfs-hasher.la
-include_HEADERS = ipfs-hasher.hxx
-bin_PROGRAMS = bin/ipfs-hasher
+lib_LTLIBRARIES = libhasher.la
+include_HEADERS = hasher.hxx
+bin_PROGRAMS = bin/hasher
 
-libipfs_hasher_la_SOURCES = ipfs-hasher.cxx
+libhasher_la_SOURCES = hasher.cxx
 
-bin_ipfs_hasher_SOURCES = main.cxx
-bin_ipfs_hasher_LDADD = libipfs-hasher.la
+bin_hasher_SOURCES = main.cxx
+bin_hasher_LDADD = libhasher.la

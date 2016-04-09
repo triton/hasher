@@ -3,7 +3,7 @@ let
   pkgs = import <nixpkgs> { };
 
   version = builtins.readFile (pkgs.stdenv.mkDerivation {
-    name = "ipfs-hasher-version";
+    name = "hasher-version";
     preferLocalBuild = true;
     nativeBuildInputs = with pkgs; [
       git
@@ -39,7 +39,7 @@ let
 in
 rec {
   tarball = pkgs.releaseTools.sourceTarball {
-    name = "ipfs-hasher-tarball";
+    name = "hasher-tarball";
     inherit version src;
     versionSuffix = "";
     nativeBuildInputs = with pkgs; [
@@ -51,14 +51,14 @@ rec {
     let
       pkgs' = import <nixpkgs> { targetSystem = system; hostSystem = system; };
     in pkgs'.releaseTools.nixBuild {
-      name = "ipfs-hasher";
+      name = "hasher";
       src = tarball;
       doCheck = true;
     }
   );
 
   release = pkgs.releaseTools.aggregate {
-    name = "ipfs-hasher-${version}";
+    name = "hasher-${version}";
     constituents = [
       tarball
       build.x86_64-linux
